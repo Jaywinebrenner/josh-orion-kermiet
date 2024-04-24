@@ -1,0 +1,53 @@
+
+$offwhite: #F3F4F3;
+
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 100px;
+    color: salmon;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 10%;
+}
+  
+.logo-wrapper {
+    img {
+        width: 100%;
+    }
+}
+.home {
+    background-color: $offwhite;
+    min-height: 100vh;
+}
+.nav-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .nav-item {
+        transition: .3s;
+        img {
+            width: 100%;
+            transition: .3s;
+        }
+        p {
+            text-align: center;
+        }
+        &:hover img {
+            transform: scale(1.02);
+            transform: rotate(5deg);
+        }
+    }
+}
+  
+
+  
