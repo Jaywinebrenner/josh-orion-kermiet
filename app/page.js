@@ -1,20 +1,17 @@
 import Image from "next/image";
-import "./styles/app.scss"
 import { NavItems } from "./utils/navItems";
 import Link from 'next/link';
+import Navigation from "./components/Navigation";
+
+
 
 export default function Home() {
-
-
-
 
 
   return (
     <main className="home">
     <div className="container">
-      <div className="logo-wrapper">
-        <img src="/logo.png"/>
-      </div>
+      <Navigation/>
       <div className="nav-wrapper">
         {
           NavItems && NavItems.map((item, i) => {

@@ -19,12 +19,12 @@ export const NavItems = [
     {
         title: "Melted Radio",
         imageSrc: "/5.jpg",
-        url: "/melted-radio"
+        url: "https://xray.fm/shows/melted-radio"
     },
     {
         title: "Free Spirit News",
         imageSrc: "/6.jpg",
-        url: "painting"
+        url: "http://www.freespiritnews.org/"
     },
     {
         title: "CV",
@@ -34,6 +34,6 @@ export const NavItems = [
     {
         title: "Shop",
         imageSrc: "/8.jpg",
-        url: "/shop"
+        url: "https://google.com"
     },
 ]
