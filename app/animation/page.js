@@ -1,22 +1,23 @@
 
 import { paintings } from '../utils/paintings'
 import Navigation from "../components/Navigation";
-
+import { animations } from '../utils/animations';
 import React from 'react'
 
 const Animation = () => {
+
+  console.log(animations)
   return (
-    <div className='paintings'>
+    <div className='animations'>
       <div className='container'>
         <Navigation/>
-        <div className='paintings-wrapper'>
+        <div className='animations-wrapper'>
           {
-              paintings && paintings.map((painting, i) => {
+              animations && animations.map((animation, i) => {
                 return (
-                  <div key={`painting-key=${i}`} className='painting-wrapper'>
-                    <img src={painting.imageUrl}/>
-                    <p>{painting.title }</p>
-
+                  <div key={`animation-key=${i}`} className='animation-wrapper'>
+                    <img src={animation.imageSrc}/>
+                    <p>{animation.title }</p>
                   </div>
                 )
               })
