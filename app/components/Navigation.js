@@ -5,8 +5,23 @@ import { NavItems } from '../utils/navItems';
 import Link from 'next/link';
 
 const Navigation = () => {
-    const pathname = usePathname()
-console.log(pathname)
+
+
+  const pathname = usePathname()
+
+  const renderLink = (link, i) => (
+    <a
+      key={`breadcrumb-key=${i}`}
+      className={pathname === link.url ? 'breadcrumb active' : 'breadcrumb'}
+      href={link.url}
+      target={link.newPage ? '_blank' : '_self'}
+      rel={link.newPage ? 'noreferrer' : ''} 
+    >
+      {link.title}
+    </a>
+  );
+  
+
   return (
     <div className="navigation">
       <div className="logo-wrapper">
@@ -18,14 +33,7 @@ console.log(pathname)
             Home
           </a>
         </Link>
-        {NavItems &&
-          NavItems.map((link, i) => (
-            <Link href={link.url} key={`breadcrumb-key=${i}`} passHref legacyBehavior>
-              <a className={pathname === link.url ? 'breadcrumb active' : 'breadcrumb'}>
-                {link.title}
-              </a>
-            </Link>
-          ))}
+        {NavItems && NavItems.map((link, i) => renderLink(link, i))}
       </div>}
     </div>
   );

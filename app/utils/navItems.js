@@ -4,27 +4,32 @@ export const NavItems = [
     {
         title: "Painting",
         imageSrc: "/2.jpg",
-        url: "/painting"
+        url: "/painting",
+        newPage: false
     },
     {
         title: "Illustration",
         imageSrc: "/3.jpg",
-        url: "/illustration"
+        url: "/illustration",
+        newPage: false
     },
     {
         title: "Animation",
         imageSrc: "/4.jpg",
-        url: "/animation"
+        url: "/animation",
+        newPage: false
     },
     {
         title: "Melted Radio",
         imageSrc: "/5.jpg",
-        url: "https://xray.fm/shows/melted-radio"
+        url: "https://xray.fm/shows/melted-radio",
+        newPage: true
     },
     {
         title: "Free Spirit News",
         imageSrc: "/6.jpg",
-        url: "http://www.freespiritnews.org/"
+        url: "http://www.freespiritnews.org/",
+        newPage: true
     },
     {
         title: "CV",
@@ -34,6 +39,7 @@ export const NavItems = [
     {
         title: "Shop",
         imageSrc: "/8.jpg",
-        url: "https://google.com"
+        url: "https://google.com",
+        newPage: true
     },
 ]
