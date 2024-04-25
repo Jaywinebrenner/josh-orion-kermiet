@@ -45,7 +45,7 @@ const Animation = () => {
   
     const timeout = setTimeout(() => {
       setShowPaintings(true);
-    }, 1);
+    }, 100);
 
     return () => clearTimeout(timeout);
   }, []);
