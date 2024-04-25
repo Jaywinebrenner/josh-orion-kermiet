@@ -1,6 +1,5 @@
 "use client"
 import { paintings } from '../utils/paintings';
-import Navigation from '../components/Navigation';
 import React, { useEffect, useState } from 'react';
 
 
@@ -19,7 +18,6 @@ const Illustration = () => {
   return (
     <div className="paintings">
       <div className="container">
-        <Navigation />
         <div className={`paintings-wrapper ${showPaintings ? 'fade-in' : ''}`}>
           {paintings &&
             paintings.map((painting, i) => (
