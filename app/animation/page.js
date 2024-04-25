@@ -13,7 +13,7 @@ const Animation = () => {
           {
               paintings && paintings.map((painting, i) => {
                 return (
-                  <div className='painting-wrapper'>
+                  <div key={`painting-key=${i}`} className='painting-wrapper'>
                     <img src={painting.imageUrl}/>
                     <p>{painting.title }</p>
 
