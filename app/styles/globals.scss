@@ -50,7 +50,8 @@ a {
         }
     }
 }
-  
+
+
 
 .paintings-wrapper {
     display: grid;
@@ -64,8 +65,45 @@ a {
         img {
             width: 100%; 
             height: auto; 
-          }
-      }
+        }
+    }
+}
+
+.paintings-wrapper {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .paintings-wrapper.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animations-wrapper {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    .animation-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        flex-direction: column;
+        align-items: center;
+        img {
+            max-width: 500px;
+        }
+    }
+  }
+
+  .animations-wrapper.fade-in {
+    opacity: 1;
+    transform: translateY(0);
   }
   
 

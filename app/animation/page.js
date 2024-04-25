@@ -1,31 +1,74 @@
 
-import { paintings } from '../utils/paintings'
-import Navigation from "../components/Navigation";
+// import { paintings } from '../utils/paintings'
+// import Navigation from "../components/Navigation";
+// import { animations } from '../utils/animations';
+// import React from 'react'
+
+// const Animation = () => {
+
+//   console.log(animations)
+//   return (
+//     <div className='animations'>
+//       <div className='container'>
+//         <Navigation/>
+//         <div className='animations-wrapper'>
+//           {
+//               animations && animations.map((animation, i) => {
+//                 return (
+//                   <div key={`animation-key=${i}`} className='animation-wrapper'>
+//                     <img src={animation.imageSrc}/>
+//                     <p>{animation.title }</p>
+//                   </div>
+//                 )
+//               })
+//           }
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default Animation
+
+
+"use client"
+import { paintings } from '../utils/paintings';
+import Navigation from '../components/Navigation';
 import { animations } from '../utils/animations';
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+
 
 const Animation = () => {
+  const [showPaintings, setShowPaintings] = useState(false);
 
-  console.log(animations)
+  useEffect(() => {
+  
+    const timeout = setTimeout(() => {
+      setShowPaintings(true);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
-    <div className='animations'>
-      <div className='container'>
-        <Navigation/>
-        <div className='animations-wrapper'>
-          {
-              animations && animations.map((animation, i) => {
-                return (
-                  <div key={`animation-key=${i}`} className='animation-wrapper'>
-                    <img src={animation.imageSrc}/>
-                    <p>{animation.title }</p>
-                  </div>
-                )
-              })
-          }
+    <div className="paintings">
+      <div className="container">
+        <Navigation />
+        <div className={`animations-wrapper ${showPaintings ? 'fade-in' : ''}`}>
+                   {
+               animations && animations.map((animation, i) => {
+                 return (
+                   <div key={`animation-key=${i}`} className='animation-wrapper'>
+                     <img src={animation.imageSrc}/>
+                     <p>{animation.title }</p>
+                   </div>
+                 )
+               })
+           }
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Animation
+export default Animation;
